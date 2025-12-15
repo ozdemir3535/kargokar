@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KargoKar sıkça sorulan sorular - Kargo gönderimi, takip, fiyatlandırma ve hizmetler hakkında sorularınızın cevapları.">
+  <meta name="keywords" content="kargo sss, sıkça sorulan sorular, kargo yardım, kargo destek">
+  <title>Sıkça Sorulan Sorular - KargoKar</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📦%3C/text%3E%3C/svg%3E">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/kargokar logo.png" alt="KargoKar Logo" class="logo-img">
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="hizmetler.html">Hizmetler</a>
+        <a href="fiyatlar.html">Fiyatlar</a>
+        <a href="kargo-takip.html">Kargo Takip</a>
+        <a href="sigorta-tazminat.html">Sigorta ve Tazminat</a>
+        <a href="sss.html" class="active">SSS</a>
+        <a href="iletisim.html">İletişim</a>
+      </nav>
+      
+      <button class="mobile-menu-btn" aria-label="Menü">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <nav class="mobile-menu">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <a href="hizmetler.html">Hizmetler</a>
+    <a href="fiyatlar.html">Fiyatlar</a>
+    <a href="kargo-takip.html">Kargo Takip</a>
+    <a href="sigorta-tazminat.html">Sigorta ve Tazminat</a>
+    <a href="sss.html">SSS</a>
+    <a href="iletisim.html">İletişim</a>
+    <button class="btn btn-secondary" id="desiCalculatorBtnMobile" style="width: 100%; margin-top: 1rem;">
+      <i class="fas fa-calculator"></i> Desi Hesapla
+    </button>
+    <a href="kargo-takip.html" class="btn btn-primary">
+      <i class="fas fa-search"></i> Kargo Takip
+    </a>
+  </nav>
+  
+  <!-- ==================== PAGE HEADER ==================== -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Sıkça Sorulan Sorular</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Ana Sayfa</a>
+        <span>/</span>
+        <span>SSS</span>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== FAQ CATEGORIES ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Size Nasıl Yardımcı Olabiliriz?</h2>
+        <p>En çok merak edilen konuları kategorilere ayırdık.</p>
+      </div>
+      
+      <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin-bottom: 3rem;">
+        <a href="#gonderim" class="feature-card fade-in text-center" style="text-decoration: none;">
+          <div class="feature-icon" style="margin: 0 auto var(--spacing-lg);">
+            <i class="fas fa-box"></i>
+          </div>
+          <h3 style="font-size: 1.1rem;">Gönderim</h3>
+        </a>
+        
+        <a href="#takip" class="feature-card fade-in text-center" style="text-decoration: none;">
+          <div class="feature-icon" style="margin: 0 auto var(--spacing-lg);">
+            <i class="fas fa-search-location"></i>
+          </div>
+          <h3 style="font-size: 1.1rem;">Takip</h3>
+        </a>
+        
+        <a href="#fiyat" class="feature-card fade-in text-center" style="text-decoration: none;">
+          <div class="feature-icon" style="margin: 0 auto var(--spacing-lg);">
+            <i class="fas fa-tag"></i>
+          </div>
+          <h3 style="font-size: 1.1rem;">Fiyat & Ödeme</h3>
+        </a>
+        
+        <a href="#teslimat" class="feature-card fade-in text-center" style="text-decoration: none;">
+          <div class="feature-icon" style="margin: 0 auto var(--spacing-lg);">
+            <i class="fas fa-truck"></i>
+          </div>
+          <h3 style="font-size: 1.1rem;">Teslimat</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== FAQ GONDERIM ==================== -->
+  <section class="section bg-light" id="gonderim">
+    <div class="container">
+      <h2 style="margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem;">
+        <i class="fas fa-box" style="color: var(--accent);"></i> Gönderim
+      </h2>
+      
+      <div class="accordion">
+        <div class="accordion-item fade-in">
+          <button class="accordion-header">
+            Nasıl kargo gönderebilirim?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Kargo göndermek için iki seçeneğiniz var:</p>
+              <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style: disc;">
+                <li>Size en yakın KargoKar şubesine gelerek kargonuzu teslim edebilirsiniz.</li>
+                <li>0850 123 45 67 numaralı telefonumuzu arayarak adresinizden kargo aldırabilirsiniz (kapıdan teslim alma +₺15).</li>
+              </ul>
+              <p style="margin-bottom: 0;">Her iki durumda da gönderici ve alıcı bilgilerini (ad, adres, telefon) hazır bulundurmanız yeterlidir.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item fade-in">
+          <button class="accordion-header">
+            Hangi ürünleri kargo ile gönderebilirim?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Yasal düzenlemelere uygun tüm ürünleri gönderebilirsiniz. Ancak aşağıdaki ürünler kargo ile gönderilemez:</p>
+              <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style: disc;">
+                <li>Patlayıcı, yanıcı ve tehlikeli maddeler</li>
+                <li>Canlı hayvanlar</li>
+                <li>Bozulabilir gıda maddeleri (özel paketleme hariç)</li>
+                <li>Nakit para ve değerli evrak</li>
+                <li>Yasadışı maddeler</li>
+              </ul>
+              <p style="margin-bottom: 0;">Kırılacak ürünler için özel paketleme hizmetimizden yararlanabilirsiniz.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item fade-in">
+          <button class="accordion-header">
+            Maksimum kargo ağırlığı ve boyutu nedir?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p><strong>Standart kargo için:</strong></p>
+              <ul style="margin: 0.5rem 0 1rem; padding-left: 1.5rem; list-style: disc;">
+                <li>Maksimum ağırlık: 30 kg</li>
+                <li>Maksimum boyut: 100x60x60 cm</li>
+              </ul>
+              <p><strong>Express ve kurumsal kargo için:</strong></p>
+              <ul style="margin: 0.5rem 0; padding-left: 1.5rem; list-style: disc;">
+                <li>Maksimum ağırlık: 50 kg</li>
+                <li>Daha büyük gönderiler için özel taşımacılık hizmeti sunulmaktadır.</li>
+              </ul>
+              <p style="margin-bottom: 0;">30 kg üzeri gönderiler için lütfen bizimle iletişime geçin.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item fade-in">
+          <button class="accordion-header">
+            Kargom için sigorta yaptırabilir miyim?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Evet, tüm kargolarınız için sigorta yaptırabilirsiniz. Sigorta ücreti, beyan ettiğiniz kargo değerinin %1'idir.</p>
+              <p>Örneğin 1.000 TL değerindeki bir kargo için sigorta ücreti 10 TL'dir.</p>
+              <p style="margin-bottom: 0;">Express kargo paketinde sigorta ücretsiz olarak dahildir.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== FAQ TAKIP ==================== -->
+  <section class="section" id="takip">
+    <div class="container">
+      <h2 style="margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem;">
+        <i class="fas fa-search-location" style="color: var(--accent);"></i> Kargo Takip
+      </h2>
+      
+      <div class="accordion">
+        <div class="accordion-item fade-in">
+          <button class="accordion-header">
+            Kargomun takip numarasını nereden bulabilirim?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Takip numaranızı aşağıdaki kaynaklardan bulabilirsiniz:</p>
+              <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style: disc;">
+                <li><strong>Kargo fişi:</strong> Şubede teslim ettiğinizde verilen fiş üzerinde</li>
+                <li><strong>SMS:</strong> Kargo kaydı sonrası telefonunuza gelen mesajda</li>
+                <li><strong>E-posta:</strong> Kayıtlı e-posta adresinize gönderilen bildirimde</li>
+                <li><strong>Satıcı:</strong> Online alışverişlerde satıcının ilettiği bilgide</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item fade-in">
+          <button class="accordion-header">
+            Kargom "Dağıtımda" yazıyor ama gelmedi, ne yapmalıyım?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>"Dağıtımda" durumu, kargonuzun kurye ile yola çıktığını gösterir. Teslimat genellikle aynı gün içinde gerçekleşir.</p>
+              <p>Eğer akşam saatlerine kadar teslim edilmediyse:</p>
+              <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style: disc;">
+                <li>0850 123 45 67 numaralı müşteri hizmetlerimizi arayın</li>
+                <li>Takip numaranızı hazır bulundurun</li>
+                <li>Size kargonuzun güncel durumu hakkında bilgi verilecektir</li>
+              </ul>
+              <p style="margin-bottom: 0;">Bazen yoğun günlerde teslimat ertesi güne sarkabilir.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item fade-in">
+          <button class="accordion-header">
+            Kargo durumum güncellenmiyor, sorun mu var?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Kargo durumu her işlem noktasında güncellenir. Güncelleme gecikmesi yaşanabilecek durumlar:</p>
+              <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style: disc;">
+                <li>Kargo transferler arası yolda olabilir</li>
+                <li>Hafta sonu veya tatil günlerinde güncelleme yavaşlayabilir</li>
+                <li>Sistem bakımları nedeniyle gecikmeler olabilir</li>
+              </ul>
+              <p style="margin-bottom: 0;">24 saatten fazla güncelleme yoksa müşteri hizmetlerimizi aramanızı öneririz.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== FAQ FIYAT ==================== -->
+  <section class="section bg-light" id="fiyat">
+    <div class="container">
+      <h2 style="margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem;">
+        <i class="fas fa-tag" style="color: var(--accent);"></i> Fiyat & Ödeme
+      </h2>
+      
+      <div class="accordion">
+        <div class="accordion-item fade-in">
+          <button class="accordion-header">
+            Kargo ücreti nasıl hesaplanır?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Kargo ücreti, gönderinizin <strong>ağırlığı</strong> veya <strong>hacimsel (desi) ağırlığından</strong> büyük olanına göre hesaplanır.</p>
+              <p><strong>Desi hesaplama formülü:</strong></p>
+              <p style="font-family: monospace; background: var(--bg-gray); padding: 0.75rem; border-radius: var(--radius-md);">
+                Desi = (En × Boy × Yükseklik) ÷ 3000
+              </p>
+              <p>Örneğin 30x20x15 cm boyutlarında, 2 kg ağırlığında bir paket için:</p>
+              <ul style="margin: 0.5rem 0; padding-left: 1.5rem; list-style: disc;">
+                <li>Desi = (30×20×15) ÷ 3000 = 3 desi</li>
+                <li>Gerçek ağırlık = 2 kg</li>
+                <li>Ücretlendirme = 3 desi üzerinden (daha büyük olan)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item fade-in">
+          <button class="accordion-header">
+            Hangi ödeme yöntemlerini kabul ediyorsunuz?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Şubelerimizde kabul edilen ödeme yöntemleri:</p>
+              <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style: disc;">
+                <li>Nakit</li>
+                <li>Kredi kartı ve banka kartı</li>
+                <li>Havale / EFT</li>
+              </ul>
+              <p><strong>Kurumsal müşteriler için:</strong></p>
+              <ul style="margin: 0.5rem 0; padding-left: 1.5rem; list-style: disc;">
+                <li>Cari hesap</li>
+                <li>Aylık faturalama</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item fade-in">
+          <button class="accordion-header">
+            Ödemeli (Alıcı ödemeli) kargo gönderebilir miyim?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Evet, ödemeli kargo gönderilebilir. Bu durumda kargo ücreti alıcıdan tahsil edilir.</p>
+              <p>Ödemeli kargolarda ek olarak <strong>₺10 tahsilat ücreti</strong> alınmaktadır.</p>
+              <p style="margin-bottom: 0;">Ayrıca kapıda ödeme (ürün bedeli tahsilatı) hizmeti de sunulmaktadır. Detaylar için şubelerimizi arayabilirsiniz.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item fade-in">
+          <button class="accordion-header">
+            Kurumsal indirim alabilir miyim?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Aylık 50 adet ve üzeri gönderi yapan işletmeler kurumsal anlaşma kapsamına girebilir.</p>
+              <p>Kurumsal anlaşma avantajları:</p>
+              <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style: disc;">
+                <li>%15-40 arası indirim (gönderi hacmine göre)</li>
+                <li>Özel müşteri temsilcisi</li>
+                <li>Aylık faturalama</li>
+                <li>API entegrasyonu</li>
+                <li>Öncelikli destek</li>
+              </ul>
+              <p style="margin-bottom: 0;">Teklif almak için <a href="iletisim.html" style="color: var(--primary);">iletişim sayfamızı</a> ziyaret edin.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== FAQ TESLIMAT ==================== -->
+  <section class="section" id="teslimat">
+    <div class="container">
+      <h2 style="margin-bottom: 2rem; display: flex; align-items: center; gap: 0.75rem;">
+        <i class="fas fa-truck" style="color: var(--accent);"></i> Teslimat
+      </h2>
+      
+      <div class="accordion">
+        <div class="accordion-item fade-in">
+          <button class="accordion-header">
+            Teslimat süreleri ne kadar?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Teslimat süreleri kargo türüne ve mesafeye göre değişir:</p>
+              <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style: disc;">
+                <li><strong>Standart Kargo:</strong> 2-4 iş günü</li>
+                <li><strong>Express Kargo (şehir içi):</strong> Aynı gün veya ertesi gün</li>
+                <li><strong>Express Kargo (şehirler arası):</strong> 1-2 iş günü</li>
+                <li><strong>Uluslararası:</strong> 5-15 iş günü (ülkeye göre değişir)</li>
+              </ul>
+              <p style="margin-bottom: 0;">Hafta sonu ve resmi tatiller iş günü olarak sayılmaz.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item fade-in">
+          <button class="accordion-header">
+            Teslimat adresimi değiştirebilir miyim?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Kargo henüz dağıtıma çıkmadıysa adres değişikliği yapılabilir.</p>
+              <p>Adres değişikliği için:</p>
+              <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style: disc;">
+                <li>0850 123 45 67 numaralı müşteri hizmetlerimizi arayın</li>
+                <li>Takip numaranızı ve yeni adresi bildirin</li>
+                <li>Değişiklik onaylandığında SMS ile bilgilendirileceksiniz</li>
+              </ul>
+              <p style="margin-bottom: 0;">Kargo dağıtıma çıktıysa, kuryemiz sizinle iletişime geçecektir.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item fade-in">
+          <button class="accordion-header">
+            Evde yoktum, kargom ne olur?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Teslimat sırasında evde değilseniz:</p>
+              <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style: disc;">
+                <li>Kurye kapınıza bir bilgi notu bırakır</li>
+                <li>Ertesi gün tekrar teslimat denenir</li>
+                <li>3 deneme sonrasında kargo şubeye alınır</li>
+                <li>Şubede 7 gün bekletilir, ardından göndericiye iade edilir</li>
+              </ul>
+              <p style="margin-bottom: 0;">Kuryemizi 0850 123 45 67'den arayarak teslimat saatini ayarlayabilirsiniz.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item fade-in">
+          <button class="accordion-header">
+            Kargom hasarlı geldi, ne yapmalıyım?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Hasarlı kargo tespit ettiğinizde:</p>
+              <ol style="margin: 1rem 0; padding-left: 1.5rem; list-style: decimal;">
+                <li>Kargoyı teslim almadan önce dış görünümü kontrol edin</li>
+                <li>Hasar varsa tutanak tutturun</li>
+                <li>Fotoğraf çekin ve saklayın</li>
+                <li>24 saat içinde 0850 123 45 67'yi arayarak şikayette bulunun</li>
+              </ol>
+              <p style="margin-bottom: 0;">Sigortalı gönderilerde hasar bedeli tarafınıza ödenir. Sigortasız gönderilerde taşıma bedeli kadar tazminat ödenir.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item fade-in">
+          <button class="accordion-header">
+            Kargomu şubeden teslim alabilir miyim?
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="accordion-content">
+            <div class="accordion-body">
+              <p>Evet, kargonuzu şubeden teslim alabilirsiniz. Bunun için:</p>
+              <ul style="margin: 1rem 0; padding-left: 1.5rem; list-style: disc;">
+                <li>Kargo gönderilirken "şubeden teslim" seçeneği işaretlenmeli</li>
+                <li>Veya müşteri hizmetlerini arayarak şubeye yönlendirme talebinde bulunabilirsiniz</li>
+              </ul>
+              <p>Şubeden teslim alırken yanınızda:</p>
+              <ul style="margin: 0.5rem 0; padding-left: 1.5rem; list-style: disc;">
+                <li>Kimlik belgesi</li>
+                <li>Takip numarası veya SMS</li>
+              </ul>
+              <p style="margin-bottom: 0;">bulundurmanız gerekmektedir.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== STILL HAVE QUESTIONS ==================== -->
+  <section class="section bg-light">
+    <div class="container text-center">
+      <h2 style="margin-bottom: 1rem;">Sorunuz Yanıtlanmadı mı?</h2>
+      <p style="max-width: 600px; margin: 0 auto 2rem; color: var(--text-light);">
+        Yukarıdaki sorular arasında aradığınızı bulamadıysanız, müşteri hizmetlerimizle iletişime geçebilirsiniz.
+      </p>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
+        <a href="tel:08501234567" class="btn btn-primary btn-lg">
+          <i class="fas fa-phone"></i> 0850 123 45 67
+        </a>
+        <a href="iletisim.html" class="btn btn-secondary btn-lg">
+          <i class="fas fa-envelope"></i> Mesaj Gönder
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== CTA ==================== -->
+  <section class="section cta">
+    <div class="container">
+      <h2>Kargo Göndermek İçin Hazır Mısınız?</h2>
+      <p>Size en yakın şubeyi bulun veya hemen kargo takip edin.</p>
+      <div class="cta-buttons">
+        <a href="iletisim.html" class="btn btn-accent btn-lg">
+          <i class="fas fa-map-marker-alt"></i> Şube Bul
+        </a>
+        <a href="kargo-takip.html" class="btn btn-white btn-lg">
+          <i class="fas fa-search"></i> Kargo Takip
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="images/kargokar logo.png" alt="KargoKar Logo" class="logo-img footer-logo-img">
+          </a>
+          <p>20 yılı aşkın deneyimimizle Türkiye'nin her köşesine güvenli ve hızlı kargo hizmeti sunuyoruz.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Hızlı Linkler</h4>
+          <ul>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+            <li><a href="fiyatlar.html">Fiyatlandırma</a></li>
+            <li><a href="kargo-takip.html">Kargo Takip</a></li>
+            <li><a href="sss.html">SSS</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Hizmetler</h4>
+          <ul>
+            <li><a href="hizmetler.html">Standart Kargo</a></li>
+            <li><a href="hizmetler.html">Express Kargo</a></li>
+            <li><a href="hizmetler.html">Kurumsal Çözümler</a></li>
+            <li><a href="hizmetler.html">Uluslararası Kargo</a></li>
+            <li><a href="hizmetler.html">Özel Taşımacılık</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>İletişim</h4>
+          <ul class="footer-contact">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Merkez Mah. Lojistik Cad. No:123<br>İstanbul, Türkiye</span>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <span>0850 123 45 67</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>info@kargokar.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 KargoKar. Tüm hakları saklıdır.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- ==================== DESI CALCULATOR MODAL ==================== -->
+  <div id="desiCalculatorModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>
+          <i class="fas fa-calculator" style="color: var(--accent); margin-right: 0.5rem;"></i>
+          Desi Hesaplama
+        </h2>
+        <button class="modal-close" id="closeDesiCalculator">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--text-light); margin-bottom: 1.5rem;">
+          Paketinizin boyutlarını girerek desi değerini hesaplayabilirsiniz. Desi = (En × Boy × Yükseklik) ÷ 3000
+        </p>
+        
+        <form id="desiCalculatorForm">
+          <div class="form-group">
+            <label for="desiEn">
+              <i class="fas fa-ruler-horizontal" style="color: var(--accent); margin-right: 0.5rem;"></i>
+              En (cm)
+            </label>
+            <input type="number" id="desiEn" class="form-control" placeholder="Örn: 30" min="1" step="0.1" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="desiBoy">
+              <i class="fas fa-ruler-vertical" style="color: var(--accent); margin-right: 0.5rem;"></i>
+              Boy (cm)
+            </label>
+            <input type="number" id="desiBoy" class="form-control" placeholder="Örn: 20" min="1" step="0.1" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="desiYukseklik">
+              <i class="fas fa-arrows-alt-v" style="color: var(--accent); margin-right: 0.5rem;"></i>
+              Yükseklik (cm)
+            </label>
+            <input type="number" id="desiYukseklik" class="form-control" placeholder="Örn: 15" min="1" step="0.1" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="desiAgirlik">
+              <i class="fas fa-weight" style="color: var(--accent); margin-right: 0.5rem;"></i>
+              Ağırlık (kg) <span style="color: var(--text-light); font-size: 0.85rem;">(Opsiyonel)</span>
+            </label>
+            <input type="number" id="desiAgirlik" class="form-control" placeholder="Örn: 5" min="0" step="0.1">
+            <small style="color: var(--text-light); font-size: 0.85rem; margin-top: 0.25rem; display: block;">
+              Ücretlendirme desi ve ağırlıktan büyük olanına göre yapılır
+            </small>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            <i class="fas fa-calculator"></i> Hesapla
+          </button>
+        </form>
+        
+        <div id="desiResult" class="desi-result" style="display: none;">
+          <div class="desi-result-card">
+            <h3>
+              <i class="fas fa-check-circle" style="color: var(--success); margin-right: 0.5rem;"></i>
+              Hesaplama Sonucu
+            </h3>
+            <div class="desi-result-item">
+              <span class="desi-label">Desi Değeri:</span>
+              <span class="desi-value" id="desiValue">-</span>
+            </div>
+            <div class="desi-result-item">
+              <span class="desi-label">Ağırlık:</span>
+              <span class="desi-value" id="agirlikValue">-</span>
+            </div>
+            <div class="desi-result-item highlight">
+              <span class="desi-label">Ücretlendirme:</span>
+              <span class="desi-value" id="ucretlendirmeValue">-</span>
+            </div>
+            <p style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-light); color: var(--text-light); font-size: 0.9rem;">
+              <i class="fas fa-info-circle" style="color: var(--accent); margin-right: 0.5rem;"></i>
+              Ücretlendirme desi ve ağırlıktan büyük olanına göre yapılır. Detaylı fiyat için şubelerimizle iletişime geçin.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/desi-calculator.js"></script>
+</body>
+</html>
+

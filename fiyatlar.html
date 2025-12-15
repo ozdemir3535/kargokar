@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KargoKar fiyatlandırma - Standart, Express ve Kurumsal kargo paketleri. Şeffaf ve uygun fiyatlar.">
+  <meta name="keywords" content="kargo fiyatları, kargo ücretleri, kargo paketleri, kurumsal kargo fiyat">
+  <title>Fiyatlandırma - KargoKar</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📦%3C/text%3E%3C/svg%3E">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/kargokar logo.png" alt="KargoKar Logo" class="logo-img">
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="hizmetler.html">Hizmetler</a>
+        <a href="fiyatlar.html" class="active">Fiyatlar</a>
+        <a href="kargo-takip.html">Kargo Takip</a>
+        <a href="sigorta-tazminat.html">Sigorta ve Tazminat</a>
+        <a href="sss.html">SSS</a>
+        <a href="iletisim.html">İletişim</a>
+      </nav>
+      
+      <button class="mobile-menu-btn" aria-label="Menü">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <nav class="mobile-menu">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <a href="hizmetler.html">Hizmetler</a>
+    <a href="fiyatlar.html">Fiyatlar</a>
+    <a href="kargo-takip.html">Kargo Takip</a>
+    <a href="sigorta-tazminat.html">Sigorta ve Tazminat</a>
+    <a href="sss.html">SSS</a>
+    <a href="iletisim.html">İletişim</a>
+    <button class="btn btn-secondary" id="desiCalculatorBtnMobile" style="width: 100%; margin-top: 1rem;">
+      <i class="fas fa-calculator"></i> Desi Hesapla
+    </button>
+    <a href="kargo-takip.html" class="btn btn-primary">
+      <i class="fas fa-search"></i> Kargo Takip
+    </a>
+  </nav>
+  
+  <!-- ==================== PAGE HEADER ==================== -->
+  <section class="page-header">
+    <div class="container">
+      <h1>Fiyatlandırma</h1>
+      <div class="breadcrumb">
+        <a href="index.html">Ana Sayfa</a>
+        <span>/</span>
+        <span>Fiyatlandırma</span>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== PRICE INFO ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Fiyat Bilgisi İçin Şubelerimizle İletişime Geçin</h2>
+        <p>Size en uygun fiyat teklifi için en yakın şubemizle iletişime geçebilirsiniz. Şubelerimiz size özel fiyatlandırma sunmaktadır.</p>
+      </div>
+      
+      <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 3rem 2rem; border-radius: var(--radius-lg); text-align: center; color: white; margin-bottom: 3rem;">
+        <i class="fas fa-info-circle" style="font-size: 3rem; color: var(--accent); margin-bottom: 1rem;"></i>
+        <h3 style="color: white; margin-bottom: 1rem;">Fiyat Bilgisi</h3>
+        <p style="color: rgba(255, 255, 255, 0.9); max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+          Kargo fiyatlarımız gönderinizin ağırlığı, boyutu, mesafesi ve teslimat türüne göre değişiklik göstermektedir. 
+          En güncel ve size özel fiyat teklifi için lütfen aşağıdaki şubelerimizden birini seçerek iletişime geçin.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== BRANCHES FOR PRICING ==================== -->
+  <section class="section bg-light">
+    <div class="container">
+      <div class="section-title">
+        <h2>Fiyat İçin Şubelerimizle İletişime Geçin</h2>
+        <p>Size en yakın şubemizi seçerek fiyat bilgisi alabilirsiniz.</p>
+      </div>
+      
+      <div id="branchesList" class="branches-grid">
+        <!-- Şube bilgileri JavaScript ile eklenecek -->
+        <div style="text-align: center; padding: 2rem; color: var(--text-light);">
+          <i class="fas fa-spinner fa-spin" style="font-size: 2rem; margin-bottom: 1rem;"></i>
+          <p>Şube bilgileri yükleniyor...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== DESI INFO ==================== -->
+  <section class="section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text fade-in">
+          <h2>Desi Hesaplama</h2>
+          <p>Kargo ücretiniz, gönderinizin ağırlığı veya hacimsel (desi) ağırlığından büyük olanına göre hesaplanır.</p>
+          
+          <div style="background: var(--bg-light); padding: 1.5rem; border-radius: var(--radius-lg); margin: 1.5rem 0;">
+            <h4 style="margin-bottom: 0.75rem;"><i class="fas fa-calculator" style="color: var(--accent); margin-right: 0.5rem;"></i> Desi Formülü</h4>
+            <p style="font-family: monospace; font-size: 1.1rem; color: var(--primary); margin-bottom: 0;">
+              Desi = (En × Boy × Yükseklik) ÷ 3000
+            </p>
+          </div>
+          
+          <p><strong>Örnek:</strong> 30cm × 20cm × 15cm boyutlarında bir paket için:</p>
+          <p style="font-family: monospace; color: var(--text-medium);">
+            Desi = (30 × 20 × 15) ÷ 3000 = 9000 ÷ 3000 = <strong>3 Desi</strong>
+          </p>
+          
+          <p style="margin-top: 1rem;">Eğer paketinizin gerçek ağırlığı 5 kg ise, ücretlendirme 5 kg üzerinden yapılır. Çünkü gerçek ağırlık, desi ağırlığından (3 desi ≈ 3 kg) büyüktür.</p>
+        </div>
+        
+        <div class="fade-in">
+          <div style="background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 2rem; border-radius: var(--radius-lg); color: white;">
+            <h3 style="color: white; margin-bottom: 1.5rem; text-align: center;">
+              <i class="fas fa-info-circle" style="color: var(--accent);"></i> Fiyatlandırma Hakkında
+            </h3>
+            <ul style="list-style: none;">
+              <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 4px;"></i>
+                <span>Fiyatlar gönderinizin özelliklerine göre değişiklik gösterir</span>
+              </li>
+              <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 4px;"></i>
+                <span>Şubelerimiz size özel fiyat teklifi sunmaktadır</span>
+              </li>
+              <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 4px;"></i>
+                <span>Kurumsal müşterilerimize özel indirimler</span>
+              </li>
+              <li style="padding: 0.75rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: flex-start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 4px;"></i>
+                <span>Toplu gönderilerde özel fiyatlandırma</span>
+              </li>
+              <li style="padding: 0.75rem 0; display: flex; align-items: flex-start; gap: 0.75rem;">
+                <i class="fas fa-check-circle" style="color: var(--accent); margin-top: 4px;"></i>
+                <span>Detaylı fiyat bilgisi için şubelerimizle iletişime geçin</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== CTA ==================== -->
+  <section class="section cta">
+    <div class="container">
+      <h2>Kurumsal Teklif Alın</h2>
+      <p>İşletmenize özel indirimli fiyatlar için hemen iletişime geçin.</p>
+      <div class="cta-buttons">
+        <a href="iletisim.html" class="btn btn-accent btn-lg">
+          <i class="fas fa-phone"></i> 0850 123 45 67
+        </a>
+        <a href="iletisim.html" class="btn btn-white btn-lg">
+          <i class="fas fa-envelope"></i> Teklif İste
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="images/kargokar logo.png" alt="KargoKar Logo" class="logo-img footer-logo-img">
+          </a>
+          <p>20 yılı aşkın deneyimimizle Türkiye'nin her köşesine güvenli ve hızlı kargo hizmeti sunuyoruz.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Hızlı Linkler</h4>
+          <ul>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+            <li><a href="fiyatlar.html">Fiyatlandırma</a></li>
+            <li><a href="kargo-takip.html">Kargo Takip</a></li>
+            <li><a href="sss.html">SSS</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Hizmetler</h4>
+          <ul>
+            <li><a href="hizmetler.html">Standart Kargo</a></li>
+            <li><a href="hizmetler.html">Express Kargo</a></li>
+            <li><a href="hizmetler.html">Kurumsal Çözümler</a></li>
+            <li><a href="hizmetler.html">Uluslararası Kargo</a></li>
+            <li><a href="hizmetler.html">Özel Taşımacılık</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>İletişim</h4>
+          <ul class="footer-contact">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Merkez Mah. Lojistik Cad. No:123<br>İstanbul, Türkiye</span>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <span>0850 123 45 67</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>info@kargokar.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 KargoKar. Tüm hakları saklıdır.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- ==================== DESI CALCULATOR MODAL ==================== -->
+  <div id="desiCalculatorModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>
+          <i class="fas fa-calculator" style="color: var(--accent); margin-right: 0.5rem;"></i>
+          Desi Hesaplama
+        </h2>
+        <button class="modal-close" id="closeDesiCalculator">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--text-light); margin-bottom: 1.5rem;">
+          Paketinizin boyutlarını girerek desi değerini hesaplayabilirsiniz. Desi = (En × Boy × Yükseklik) ÷ 3000
+        </p>
+        
+        <form id="desiCalculatorForm">
+          <div class="form-group">
+            <label for="desiEn">
+              <i class="fas fa-ruler-horizontal" style="color: var(--accent); margin-right: 0.5rem;"></i>
+              En (cm)
+            </label>
+            <input type="number" id="desiEn" class="form-control" placeholder="Örn: 30" min="1" step="0.1" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="desiBoy">
+              <i class="fas fa-ruler-vertical" style="color: var(--accent); margin-right: 0.5rem;"></i>
+              Boy (cm)
+            </label>
+            <input type="number" id="desiBoy" class="form-control" placeholder="Örn: 20" min="1" step="0.1" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="desiYukseklik">
+              <i class="fas fa-arrows-alt-v" style="color: var(--accent); margin-right: 0.5rem;"></i>
+              Yükseklik (cm)
+            </label>
+            <input type="number" id="desiYukseklik" class="form-control" placeholder="Örn: 15" min="1" step="0.1" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="desiAgirlik">
+              <i class="fas fa-weight" style="color: var(--accent); margin-right: 0.5rem;"></i>
+              Ağırlık (kg) <span style="color: var(--text-light); font-size: 0.85rem;">(Opsiyonel)</span>
+            </label>
+            <input type="number" id="desiAgirlik" class="form-control" placeholder="Örn: 5" min="0" step="0.1">
+            <small style="color: var(--text-light); font-size: 0.85rem; margin-top: 0.25rem; display: block;">
+              Ücretlendirme desi ve ağırlıktan büyük olanına göre yapılır
+            </small>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            <i class="fas fa-calculator"></i> Hesapla
+          </button>
+        </form>
+        
+        <div id="desiResult" class="desi-result" style="display: none;">
+          <div class="desi-result-card">
+            <h3>
+              <i class="fas fa-check-circle" style="color: var(--success); margin-right: 0.5rem;"></i>
+              Hesaplama Sonucu
+            </h3>
+            <div class="desi-result-item">
+              <span class="desi-label">Desi Değeri:</span>
+              <span class="desi-value" id="desiValue">-</span>
+            </div>
+            <div class="desi-result-item">
+              <span class="desi-label">Ağırlık:</span>
+              <span class="desi-value" id="agirlikValue">-</span>
+            </div>
+            <div class="desi-result-item highlight">
+              <span class="desi-label">Ücretlendirme:</span>
+              <span class="desi-value" id="ucretlendirmeValue">-</span>
+            </div>
+            <p style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-light); color: var(--text-light); font-size: 0.9rem;">
+              <i class="fas fa-info-circle" style="color: var(--accent); margin-right: 0.5rem;"></i>
+              Ücretlendirme desi ve ağırlıktan büyük olanına göre yapılır. Detaylı fiyat için şubelerimizle iletişime geçin.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/branches-pricing.js"></script>
+  <script src="js/desi-calculator.js"></script>
+</body>
+</html>
+

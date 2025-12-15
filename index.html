@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="KargoKar - Güvenilir ve hızlı kargo hizmetleri. Türkiye'nin her yerine güvenli teslimat.">
+  <meta name="keywords" content="kargo, taşımacılık, lojistik, teslimat, kargo takip">
+  <title>KargoKar - Güvenilir Kargo Hizmetleri</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📦%3C/text%3E%3C/svg%3E">
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <!-- ==================== HEADER ==================== -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/kargokar logo.png" alt="KargoKar Logo" class="logo-img">
+      </a>
+      
+      <nav class="nav-menu">
+        <a href="index.html" class="active">Ana Sayfa</a>
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="hizmetler.html">Hizmetler</a>
+        <a href="fiyatlar.html">Fiyatlar</a>
+        <a href="kargo-takip.html">Kargo Takip</a>
+        <a href="sigorta-tazminat.html">Sigorta ve Tazminat</a>
+        <a href="sss.html">SSS</a>
+        <a href="iletisim.html">İletişim</a>
+      </nav>
+      
+      <button class="mobile-menu-btn" aria-label="Menü">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <nav class="mobile-menu">
+    <a href="index.html">Ana Sayfa</a>
+    <a href="hakkimizda.html">Hakkımızda</a>
+    <a href="hizmetler.html">Hizmetler</a>
+    <a href="fiyatlar.html">Fiyatlar</a>
+    <a href="kargo-takip.html">Kargo Takip</a>
+    <a href="sigorta-tazminat.html">Sigorta ve Tazminat</a>
+    <a href="sss.html">SSS</a>
+    <a href="iletisim.html">İletişim</a>
+    <button class="btn btn-secondary" id="desiCalculatorBtnMobile" style="width: 100%; margin-top: 1rem;">
+      <i class="fas fa-calculator"></i> Desi Hesapla
+    </button>
+    <a href="kargo-takip.html" class="btn btn-primary">
+      <i class="fas fa-search"></i> Kargo Takip
+    </a>
+  </nav>
+  
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="hero">
+    <div class="hero-shapes">
+      <div class="hero-shape hero-shape-1">
+        <img src="images/hero-image-1.jpg" alt="Kargo Hizmetleri" class="hero-image">
+      </div>
+      <div class="hero-shape hero-shape-2">
+        <img src="images/hero-image-2.jpg" alt="Lojistik Çözümler" class="hero-image">
+      </div>
+      <div class="hero-shape hero-shape-3">
+        <img src="images/hero-image-3.jpg" alt="Güvenli Teslimat" class="hero-image">
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <i class="fas fa-star"></i>
+          Türkiye'nin Güvenilir Kargo Partneri
+        </div>
+        
+        <h1>Kargonuz Güvende, Teslimat Zamanında</h1>
+        
+        <p>Türkiye'nin dört bir yanına hızlı, güvenli ve ekonomik kargo hizmetleri sunuyoruz. 20 yıllık tecrübemizle her gönderinizi titizlikle taşıyoruz.</p>
+        
+        <div class="hero-buttons">
+          <a href="hizmetler.html" class="btn btn-accent btn-lg">
+            <i class="fas fa-truck"></i> Hizmetlerimiz
+          </a>
+          <a href="kargo-takip.html" class="btn btn-white btn-lg">
+            <i class="fas fa-search"></i> Kargo Takip
+          </a>
+          <button class="btn btn-white btn-lg" id="desiCalculatorBtn">
+            <i class="fas fa-calculator"></i> Desi Hesapla
+          </button>
+        </div>
+        
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat-number">500K+</div>
+            <div class="hero-stat-label">Mutlu Müşteri</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">81</div>
+            <div class="hero-stat-label">İl Kapsamı</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">1M+</div>
+            <div class="hero-stat-label">Yıllık Gönderi</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-number">98%</div>
+            <div class="hero-stat-label">Zamanında Teslimat</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== FEATURES ==================== -->
+  <section class="section features">
+    <div class="container">
+      <div class="section-title">
+        <h2>Neden KargoKar?</h2>
+        <p>Sektördeki deneyimimiz ve müşteri odaklı yaklaşımımızla fark yaratıyoruz.</p>
+      </div>
+      
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon">
+            <i class="fas fa-shipping-fast"></i>
+          </div>
+          <h3>Hızlı Teslimat</h3>
+          <p>Aynı gün ve ertesi gün teslimat seçenekleriyle kargonuz en kısa sürede adrese ulaşır.</p>
+        </div>
+        
+        <div class="feature-card fade-in">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Güvenli Taşıma</h3>
+          <p>Özel paketleme ve sigorta seçenekleriyle kargonuz her zaman güvende.</p>
+        </div>
+        
+        <div class="feature-card fade-in">
+          <div class="feature-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <h3>Canlı Takip</h3>
+          <p>Kargonuzun nerede olduğunu anlık olarak takip edin, bildirimlerle haberdar olun.</p>
+        </div>
+        
+        <div class="feature-card fade-in">
+          <div class="feature-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3>7/24 Destek</h3>
+          <p>Müşteri hizmetlerimiz her an yanınızda, sorularınız anında cevaplanır.</p>
+        </div>
+        
+        <div class="feature-card fade-in">
+          <div class="feature-icon">
+            <i class="fas fa-wallet"></i>
+          </div>
+          <h3>Uygun Fiyat</h3>
+          <p>Rekabetçi fiyatlarımız ve esnek ödeme seçeneklerimizle bütçenize uygun çözümler.</p>
+        </div>
+        
+        <div class="feature-card fade-in">
+          <div class="feature-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3>Geniş Ağ</h3>
+          <p>81 ilde 500+ şube ve 2000+ dağıtım noktasıyla her yere ulaşırız.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== STATS ==================== -->
+  <section class="section stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-in">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Yıllık Deneyim</div>
+        </div>
+        <div class="stat-item fade-in">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Şube Sayısı</div>
+        </div>
+        <div class="stat-item fade-in">
+          <div class="stat-number">2000+</div>
+          <div class="stat-label">Dağıtım Noktası</div>
+        </div>
+        <div class="stat-item fade-in">
+          <div class="stat-number">5000+</div>
+          <div class="stat-label">Kurumsal Müşteri</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== TESTIMONIALS ==================== -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2>Müşterilerimiz Ne Diyor?</h2>
+        <p>Binlerce mutlu müşterimizin deneyimlerini okuyun.</p>
+      </div>
+      
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"E-ticaret işim için KargoKar'ı tercih ediyorum. Hızlı teslimat ve müşteri memnuniyeti konusunda beklentilerimi fazlasıyla karşılıyorlar."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AK</div>
+            <div class="testimonial-info">
+              <h4>Ahmet Kaya</h4>
+              <span>E-Ticaret Girişimcisi</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Kırılacak ürünlerimizi özel paketleme ile gönderiyoruz. Yıllardır hiçbir hasar yaşamadık. Teşekkürler KargoKar!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">ZD</div>
+            <div class="testimonial-info">
+              <h4>Zeynep Demir</h4>
+              <span>El Sanatları Atölyesi</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-card fade-in">
+          <div class="testimonial-stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Kurumsal anlaşmamız sayesinde hem maliyet avantajı sağlıyoruz hem de güvenilir bir partner ile çalışıyoruz."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MY</div>
+            <div class="testimonial-info">
+              <h4>Mehmet Yılmaz</h4>
+              <span>ABC Lojistik Müdürü</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== PARTNER LOGO ==================== -->
+  <section class="section partner-section">
+    <div class="container">
+      <div class="partner-logo-container">
+        <img src="images/logo.png" alt="Partner Logo" class="partner-logo">
+        <p class="partner-tagline">Endüstriyel çözüm ortağınız</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== CTA ==================== -->
+  <section class="section cta">
+    <div class="container">
+      <h2>Hemen Kargo Göndermeye Başlayın</h2>
+      <p>Size en yakın şubemizi bulun veya online kargo kaydı oluşturun. Güvenli ve hızlı teslimat için KargoKar yanınızda.</p>
+      <div class="cta-buttons">
+        <a href="iletisim.html" class="btn btn-accent btn-lg">
+          <i class="fas fa-map-marker-alt"></i> Şube Bul
+        </a>
+        <a href="hizmetler.html" class="btn btn-white btn-lg">
+          <i class="fas fa-info-circle"></i> Detaylı Bilgi
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">
+            <img src="images/kargokar logo.png" alt="KargoKar Logo" class="logo-img">
+          </a>
+          <p>20 yılı aşkın deneyimimizle Türkiye'nin her köşesine güvenli ve hızlı kargo hizmeti sunuyoruz.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Hızlı Linkler</h4>
+          <ul>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="hizmetler.html">Hizmetlerimiz</a></li>
+            <li><a href="fiyatlar.html">Fiyatlandırma</a></li>
+            <li><a href="kargo-takip.html">Kargo Takip</a></li>
+            <li><a href="sss.html">SSS</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>Hizmetler</h4>
+          <ul>
+            <li><a href="hizmetler.html">Standart Kargo</a></li>
+            <li><a href="hizmetler.html">Express Kargo</a></li>
+            <li><a href="hizmetler.html">Kurumsal Çözümler</a></li>
+            <li><a href="hizmetler.html">Uluslararası Kargo</a></li>
+            <li><a href="hizmetler.html">Özel Taşımacılık</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h4>İletişim</h4>
+          <ul class="footer-contact">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Merkez Mah. Lojistik Cad. No:123<br>İstanbul, Türkiye</span>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <span>0850 123 45 67</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <span>info@kargokar.com</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 KargoKar. Tüm hakları saklıdır.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- ==================== DESI CALCULATOR MODAL ==================== -->
+  <div id="desiCalculatorModal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>
+          <i class="fas fa-calculator" style="color: var(--accent); margin-right: 0.5rem;"></i>
+          Desi Hesaplama
+        </h2>
+        <button class="modal-close" id="closeDesiCalculator">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p style="color: var(--text-light); margin-bottom: 1.5rem;">
+          Paketinizin boyutlarını girerek desi değerini hesaplayabilirsiniz. Desi = (En × Boy × Yükseklik) ÷ 3000
+        </p>
+        
+        <form id="desiCalculatorForm">
+          <div class="form-group">
+            <label for="desiEn">
+              <i class="fas fa-ruler-horizontal" style="color: var(--accent); margin-right: 0.5rem;"></i>
+              En (cm)
+            </label>
+            <input type="number" id="desiEn" class="form-control" placeholder="Örn: 30" min="1" step="0.1" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="desiBoy">
+              <i class="fas fa-ruler-vertical" style="color: var(--accent); margin-right: 0.5rem;"></i>
+              Boy (cm)
+            </label>
+            <input type="number" id="desiBoy" class="form-control" placeholder="Örn: 20" min="1" step="0.1" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="desiYukseklik">
+              <i class="fas fa-arrows-alt-v" style="color: var(--accent); margin-right: 0.5rem;"></i>
+              Yükseklik (cm)
+            </label>
+            <input type="number" id="desiYukseklik" class="form-control" placeholder="Örn: 15" min="1" step="0.1" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="desiAgirlik">
+              <i class="fas fa-weight" style="color: var(--accent); margin-right: 0.5rem;"></i>
+              Ağırlık (kg) <span style="color: var(--text-light); font-size: 0.85rem;">(Opsiyonel)</span>
+            </label>
+            <input type="number" id="desiAgirlik" class="form-control" placeholder="Örn: 5" min="0" step="0.1">
+            <small style="color: var(--text-light); font-size: 0.85rem; margin-top: 0.25rem; display: block;">
+              Ücretlendirme desi ve ağırlıktan büyük olanına göre yapılır
+            </small>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+            <i class="fas fa-calculator"></i> Hesapla
+          </button>
+        </form>
+        
+        <div id="desiResult" class="desi-result" style="display: none;">
+          <div class="desi-result-card">
+            <h3>
+              <i class="fas fa-check-circle" style="color: var(--success); margin-right: 0.5rem;"></i>
+              Hesaplama Sonucu
+            </h3>
+            <div class="desi-result-item">
+              <span class="desi-label">Desi Değeri:</span>
+              <span class="desi-value" id="desiValue">-</span>
+            </div>
+            <div class="desi-result-item">
+              <span class="desi-label">Ağırlık:</span>
+              <span class="desi-value" id="agirlikValue">-</span>
+            </div>
+            <div class="desi-result-item highlight">
+              <span class="desi-label">Ücretlendirme:</span>
+              <span class="desi-value" id="ucretlendirmeValue">-</span>
+            </div>
+            <p style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid var(--border-light); color: var(--text-light); font-size: 0.9rem;">
+              <i class="fas fa-info-circle" style="color: var(--accent); margin-right: 0.5rem;"></i>
+              Ücretlendirme desi ve ağırlıktan büyük olanına göre yapılır. Detaylı fiyat için şubelerimizle iletişime geçin.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/desi-calculator.js"></script>
+</body>
+</html>
+
