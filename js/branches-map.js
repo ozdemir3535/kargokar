@@ -30,81 +30,140 @@
 // =============================================
 
 const branchesByCity = {
-  // İSTANBUL
-  "İstanbul": [
-    {
-      name: "İstanbul Merkez Şube",
-      lat: 41.0082,
-      lng: 28.9784,
-      address: "Merkez Mah. Lojistik Cad. No:123, Kağıthane, İstanbul",
-      phone: "0212 123 45 67"
-    }
-    // İstanbul'daki diğer şubeleri buraya ekleyin
-    // { name: "Şube Adı", lat: 41.xxxx, lng: 28.xxxx, address: "Adres", phone: "0212 xxx xx xx" },
+  // ADANA
+  "Adana": [
+    { name: "Adana İncirlik Şubesi", lat: 36.9789, lng: 35.2983, address: "", phone: "" },
+    { name: "Adana Sanayi Şubesi", lat: 36.9850, lng: 35.3200, address: "", phone: "" },
+    { name: "Adana Saydam Şubesi", lat: 36.9900, lng: 35.3100, address: "", phone: "" },
+    { name: "Adana Yüreğir Şubesi", lat: 36.9800, lng: 35.3400, address: "", phone: "" },
+    { name: "Adana Toros Şubesi", lat: 36.9750, lng: 35.3300, address: "", phone: "" },
+    { name: "Adana Misis Şubesi", lat: 36.9600, lng: 35.6200, address: "", phone: "" },
+    { name: "Adana Seyhan Şubesi", lat: 36.9914, lng: 35.3308, address: "", phone: "" },
+    { name: "Adana Ceyhan Şubesi", lat: 37.0247, lng: 35.8175, address: "", phone: "" }
   ],
   
   // ANKARA
   "Ankara": [
-    {
-      name: "Ankara Merkez Şube",
-      lat: 39.9334,
-      lng: 32.8597,
-      address: "Kızılay Mah. Atatürk Bulvarı No:45, Çankaya, Ankara",
-      phone: "0312 123 45 67"
-    }
-    // Ankara'daki diğer şubeleri buraya ekleyin
+    { name: "Ankara Sincan Şubesi", lat: 39.9544, lng: 32.5689, address: "", phone: "" },
+    { name: "Ankara Ostim Şubesi", lat: 39.9667, lng: 32.7833, address: "", phone: "" },
+    { name: "Ankara Şaşmaz Şubesi", lat: 39.9500, lng: 32.8000, address: "", phone: "" },
+    { name: "Ankara İvedik Şubesi", lat: 39.9333, lng: 32.8500, address: "", phone: "" },
+    { name: "Ankara Gimat Şubesi", lat: 39.9200, lng: 32.8500, address: "", phone: "" },
+    { name: "Ankara Kazan Şubesi", lat: 40.2333, lng: 32.6833, address: "", phone: "" },
+    { name: "Ankara Kızılay Şubesi", lat: 39.9208, lng: 32.8541, address: "", phone: "" },
+    { name: "Ankara Siteler Şubesi", lat: 39.9500, lng: 32.8500, address: "", phone: "" },
+    { name: "Ankara Kardelen Şubesi", lat: 39.9400, lng: 32.8600, address: "", phone: "" },
+    { name: "Ankara Balgat Şubesi", lat: 39.9100, lng: 32.8600, address: "", phone: "" },
+    { name: "Ankara İskitler Şubesi", lat: 39.9500, lng: 32.8700, address: "", phone: "" },
+    { name: "Ankara Temelli Şubesi", lat: 39.5500, lng: 32.4833, address: "", phone: "" }
   ],
   
-  // İZMİR
-  "İzmir": [
-    {
-      name: "İzmir Merkez Şube",
-      lat: 38.4237,
-      lng: 27.1428,
-      address: "Konak Mah. Cumhuriyet Bulvarı No:12, Konak, İzmir",
-      phone: "0232 123 45 67"
-    }
-    // İzmir'deki diğer şubeleri buraya ekleyin
+  // ŞANLIURFA
+  "Şanlıurfa": [
+    { name: "Şanlıurfa Merkez Şubesi", lat: 37.1674, lng: 38.7955, address: "", phone: "" }
+  ],
+  
+  // İSKENDERUN
+  "İskenderun": [
+    { name: "İskenderun Merkez Şubesi", lat: 36.5872, lng: 36.1733, address: "", phone: "" }
+  ],
+  
+  // İSTANBUL ANADOLU
+  "İstanbul Anadolu": [
+    { name: "İstanbul Anadolu Yakası Şubesi", lat: 40.9849, lng: 29.1031, address: "", phone: "" }
+  ],
+  
+  // İSTANBUL AVRUPA
+  "İstanbul Avrupa": [
+    { name: "İstanbul Avrupa Yakası Şubesi", lat: 41.0082, lng: 28.9784, address: "", phone: "" }
+  ],
+  
+  // ÇORUM
+  "Çorum": [
+    { name: "Çorum Merkez Şubesi", lat: 40.5506, lng: 34.9556, address: "", phone: "" }
   ],
   
   // BURSA
   "Bursa": [
-    {
-      name: "Bursa Merkez Şube",
-      lat: 40.1826,
-      lng: 29.0665,
-      address: "Osmangazi Mah. Atatürk Cad. No:78, Osmangazi, Bursa",
-      phone: "0224 123 45 67"
-    }
-    // Bursa'daki diğer şubeleri buraya ekleyin
+    { name: "Bursa Çalı Şubesi", lat: 40.2000, lng: 29.1000, address: "", phone: "" },
+    { name: "Bursa Samanlı Şubesi", lat: 40.2500, lng: 29.1500, address: "", phone: "" },
+    { name: "Bursa Oyak Şubesi", lat: 40.2167, lng: 29.0833, address: "", phone: "" },
+    { name: "Bursa Duaçınarı Şubesi", lat: 40.2333, lng: 29.1000, address: "", phone: "" },
+    { name: "Bursa İnegöl Şubesi", lat: 40.0833, lng: 29.5167, address: "", phone: "" },
+    { name: "Bursa Oto San Sit Şubesi", lat: 40.2000, lng: 29.0500, address: "", phone: "" },
+    { name: "Bursa Balıklı Şubesi", lat: 40.1833, lng: 29.0667, address: "", phone: "" },
+    { name: "Bursa Demirtaş Şubesi", lat: 40.2167, lng: 29.1167, address: "", phone: "" }
   ],
   
-  // ANTALYA
-  "Antalya": [
-    {
-      name: "Antalya Merkez Şube",
-      lat: 36.8841,
-      lng: 30.7056,
-      address: "Muratpaşa Mah. Atatürk Bulvarı No:34, Muratpaşa, Antalya",
-      phone: "0242 123 45 67"
-    }
-    // Antalya'daki diğer şubeleri buraya ekleyin
-  ]
+  // GAZİANTEP
+  "Gaziantep": [
+    { name: "Gaziantep İpekyolu Şubesi", lat: 37.0662, lng: 37.3833, address: "", phone: "" },
+    { name: "Gaziantep Küsget Şubesi", lat: 37.0500, lng: 37.4000, address: "", phone: "" },
+    { name: "Gaziantep Başpınar Şubesi", lat: 37.0833, lng: 37.3667, address: "", phone: "" },
+    { name: "Gaziantep Şahinbey Şubesi", lat: 37.0667, lng: 37.3667, address: "", phone: "" },
+    { name: "Gaziantep İncilipınar Şubesi", lat: 37.0500, lng: 37.3500, address: "", phone: "" },
+    { name: "Gaziantep Nizip Şubesi", lat: 37.0167, lng: 37.8000, address: "", phone: "" }
+  ],
   
-  // Diğer 13 ili buraya ekleyin:
-  // "Adana": [ ... ],
-  // "Gaziantep": [ ... ],
-  // "Konya": [ ... ],
-  // "Kocaeli": [ ... ],
-  // "Mersin": [ ... ],
-  // "Diyarbakır": [ ... ],
-  // "Hatay": [ ... ],
-  // "Manisa": [ ... ],
-  // "Kayseri": [ ... ],
-  // "Samsun": [ ... ],
-  // "Balıkesir": [ ... ],
-  // "Aydın": [ ... ],
-  // "Tekirdağ": [ ... ],
+  // HATAY
+  "Hatay": [
+    { name: "Hatay Merkez Şubesi", lat: 36.4018, lng: 36.3498, address: "", phone: "" }
+  ],
+  
+  // KAHRAMANMARAŞ
+  "Kahramanmaraş": [
+    { name: "Kahramanmaraş Merkez Şubesi", lat: 37.5858, lng: 36.9371, address: "", phone: "" }
+  ],
+  
+  // KAYSERİ
+  "Kayseri": [
+    { name: "Kayseri Merkez Şubesi", lat: 38.7312, lng: 35.4787, address: "", phone: "" }
+  ],
+  
+  // KOCAELİ
+  "Kocaeli": [
+    { name: "Kocaeli Dilovası Şubesi", lat: 40.7667, lng: 29.5333, address: "", phone: "" },
+    { name: "Kocaeli Şekerpınar Şubesi", lat: 40.8000, lng: 29.4500, address: "", phone: "" },
+    { name: "Kocaeli Gebze Şubesi", lat: 40.8000, lng: 29.4333, address: "", phone: "" },
+    { name: "Kocaeli Anibal Şubesi", lat: 40.7833, lng: 29.4167, address: "", phone: "" }
+  ],
+  
+  // KONYA
+  "Konya": [
+    { name: "Konya Büsan Şubesi", lat: 37.8746, lng: 32.4932, address: "", phone: "" },
+    { name: "Konya Zafer Şubesi", lat: 37.8667, lng: 32.5000, address: "", phone: "" },
+    { name: "Konya Karatay Şubesi", lat: 37.8833, lng: 32.4833, address: "", phone: "" },
+    { name: "Konya Aykent Şubesi", lat: 37.8500, lng: 32.5167, address: "", phone: "" },
+    { name: "Konya Organize Şubesi", lat: 37.9000, lng: 32.4500, address: "", phone: "" }
+  ],
+  
+  // MANİSA
+  "Manisa": [
+    { name: "Manisa Merkez Şubesi", lat: 38.6142, lng: 27.4296, address: "", phone: "" },
+    { name: "Manisa Turgutlu Şubesi", lat: 38.5000, lng: 27.7000, address: "", phone: "" }
+  ],
+  
+  // MERSİN
+  "Mersin": [
+    { name: "Mersin Merkez Şubesi", lat: 36.8000, lng: 34.6333, address: "", phone: "" },
+    { name: "Mersin Tarsus Şubesi", lat: 36.9167, lng: 34.8833, address: "", phone: "" }
+  ],
+  
+  // OSMANİYE
+  "Osmaniye": [
+    { name: "Osmaniye Merkez Şubesi", lat: 37.0742, lng: 36.2478, address: "", phone: "" }
+  ],
+  
+  // SAMSUN
+  "Samsun": [
+    { name: "Samsun Merkez Şubesi", lat: 41.2867, lng: 36.3300, address: "", phone: "" },
+    { name: "Samsun İlkadım Şubesi", lat: 41.2833, lng: 36.3333, address: "", phone: "" }
+  ],
+  
+  // TEKİRDAĞ
+  "Tekirdağ": [
+    { name: "Tekirdağ Çorlu Şubesi", lat: 41.1500, lng: 27.8000, address: "", phone: "" }
+  ]
 };
 
 // Tüm şubeleri tek bir diziye dönüştür
@@ -148,17 +207,30 @@ document.addEventListener('DOMContentLoaded', function() {
   // Türkiye'nin merkez koordinatları
   const turkeyCenter = [39.0, 35.0];
   
+  // Türkiye sınırları (maxBounds) - Harita bu sınırlar dışına çıkamaz
+  // Daha dar sınırlar ile Türkiye'nin tamamını kapsayacak şekilde
+  const turkeyBounds = L.latLngBounds(
+    [35.8, 25.6], // Güneybatı köşe (en güney, en batı)
+    [42.1, 44.8]  // Kuzeydoğu köşe (en kuzey, en doğu)
+  );
+  
   // Haritayı oluştur
   const map = L.map('turkeyMap', {
     center: turkeyCenter,
     zoom: 6,
-    minZoom: 5,
-    maxZoom: 18
+    minZoom: 6, // Minimum zoom'u artırdık, böylece çok uzaklaşamaz
+    maxZoom: 18,
+    maxBounds: turkeyBounds,
+    maxBoundsViscosity: 1.0 // Sınırlara yapışma kuvveti (1.0 = tam yapışma)
   });
   
-  // OpenStreetMap tile layer ekle
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  // Harita hareket ettirildiğinde sınırları kontrol et
+  map.setMaxBounds(turkeyBounds);
+  
+  // CartoDB Positron tile layer ekle (açık renk, sade görünüm)
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
     maxZoom: 19
   }).addTo(map);
   
@@ -206,16 +278,16 @@ document.addEventListener('DOMContentLoaded', function() {
           <i class="fas fa-city" style="color: var(--accent); margin-right: 0.5rem;"></i>
           ${branch.city}
         </p>
-        <p style="margin: 0.25rem 0; font-size: 0.9rem;">
+        ${branch.address ? `<p style="margin: 0.25rem 0; font-size: 0.9rem;">
           <i class="fas fa-map-marker-alt" style="color: var(--accent); margin-right: 0.5rem;"></i>
           ${branch.address}
-        </p>
-        <p style="margin: 0.25rem 0; font-size: 0.9rem;">
+        </p>` : ''}
+        ${branch.phone ? `<p style="margin: 0.25rem 0; font-size: 0.9rem;">
           <i class="fas fa-phone" style="color: var(--accent); margin-right: 0.5rem;"></i>
           <a href="tel:${branch.phone.replace(/\s/g, '')}" style="color: var(--primary); text-decoration: none;">
             ${branch.phone}
           </a>
-        </p>
+        </p>` : ''}
       </div>
     `;
     
@@ -230,13 +302,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Marker cluster'ı haritaya ekle
   map.addLayer(markers);
   
-  // Tüm şubeleri içeren bounds hesapla
-  if (allBranches.length > 0) {
-    const bounds = markers.getBounds();
-    if (bounds.isValid()) {
-      map.fitBounds(bounds, { padding: [50, 50] });
-    }
-  }
+  // Harita Türkiye görünümünde sabit kalacak (otomatik zoom yok)
   
   // İstatistikleri göster (isteğe bağlı)
   const branchCounts = getBranchCounts();
