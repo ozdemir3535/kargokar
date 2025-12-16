@@ -318,6 +318,60 @@ p {
   width: 100%;
 }
 
+/* Nav Link Notice Badge */
+.nav-link-with-notice {
+  position: relative;
+}
+
+.nav-notice-badge {
+  display: inline-block;
+  margin-left: 0.25rem;
+  font-size: 0.7em;
+  font-weight: 700;
+  color: var(--accent);
+  vertical-align: super;
+}
+
+.nav-notice-tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-dark);
+  color: var(--bg-white);
+  font-size: var(--text-xs);
+  font-weight: 400;
+  white-space: nowrap;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+  pointer-events: none;
+  z-index: 1000;
+  max-width: 350px;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.nav-notice-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--bg-dark);
+}
+
+.nav-link-with-notice:hover .nav-notice-tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
 
 .mobile-menu-btn {
   display: flex;
