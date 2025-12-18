@@ -15,7 +15,7 @@ const branchesForPricing = [
     name: "İstanbul Merkez Şube",
     city: "İstanbul",
     address: "Merkez Mah. Lojistik Cad. No:123, Kağıthane",
-    phone: "0212 123 45 67",
+    phone: "444 0 410",
     email: "istanbul@kargokar.com"
   },
   {
