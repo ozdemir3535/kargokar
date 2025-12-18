@@ -243,6 +243,53 @@ document.addEventListener('DOMContentLoaded', function() {
     popupAnchor: [0, -40]
   });
   
+  // Merkez ofis için özel marker ikonu (farklı renk ve ikon)
+  const headquartersIcon = L.divIcon({
+    className: 'custom-marker headquarters-marker',
+    html: '<div class="marker-pin headquarters-pin"><i class="fas fa-building"></i></div>',
+    iconSize: [35, 45],
+    iconAnchor: [17, 45],
+    popupAnchor: [0, -45]
+  });
+  
+  // Merkez ofis marker'ını ekle
+  const headquartersLat = 39.95;
+  const headquartersLng = 32.75;
+  const headquartersMarker = L.marker([headquartersLat, headquartersLng], {
+    icon: headquartersIcon,
+    zIndexOffset: 1000 // Merkez ofis marker'ı her zaman üstte görünsün
+  });
+  
+  const headquartersPopupContent = `
+    <div class="branch-popup">
+      <h4 style="margin: 0 0 0.5rem 0; color: var(--primary); font-weight: 700;">
+        <i class="fas fa-building" style="color: var(--accent); margin-right: 0.5rem;"></i>
+        KargoKar Merkez Ofis
+      </h4>
+      <p style="margin: 0.25rem 0; font-size: 0.85rem; color: var(--text-light);">
+        <i class="fas fa-city" style="color: var(--accent); margin-right: 0.5rem;"></i>
+        Ankara
+      </p>
+      <p style="margin: 0.25rem 0; font-size: 0.9rem;">
+        <i class="fas fa-map-marker-alt" style="color: var(--accent); margin-right: 0.5rem;"></i>
+        Yakacık Mahallesi 3885 Sokak No: 1/A Yenimahalle / ANKARA
+      </p>
+      <p style="margin: 0.25rem 0; font-size: 0.9rem;">
+        <i class="fas fa-phone" style="color: var(--accent); margin-right: 0.5rem;"></i>
+        <a href="tel:4440410" style="color: var(--primary); text-decoration: none;">
+          444 0 410
+        </a>
+      </p>
+    </div>
+  `;
+  
+  headquartersMarker.bindPopup(headquartersPopupContent, {
+    maxWidth: 300,
+    className: 'branch-popup-container'
+  });
+  
+  headquartersMarker.addTo(map);
+  
   // Marker Cluster Group oluştur (çok sayıda şube için)
   const markers = L.markerClusterGroup({
     chunkedLoading: true,
