@@ -163,6 +163,21 @@ const branchesByCity = {
   // TEKİRDAĞ
   "Tekirdağ": [
     { name: "Tekirdağ Çorlu Şubesi", lat: 41.1500, lng: 27.8000, address: "", phone: "" }
+  ],
+  
+  // İZMİR
+  "İzmir": [
+    { name: "İzmir Işıkkent Şubesi", lat: 38.4500, lng: 27.1500, address: "", phone: "" },
+    { name: "İzmir Buca Şubesi", lat: 38.3800, lng: 27.1700, address: "", phone: "" },
+    { name: "İzmir Gaziemir Şubesi", lat: 38.3200, lng: 27.1000, address: "", phone: "" },
+    { name: "İzmir Karabağlar Şubesi", lat: 38.3700, lng: 27.1000, address: "", phone: "" },
+    { name: "İzmir Nif (Kemalpaşa) Şubesi", lat: 38.4200, lng: 27.4200, address: "", phone: "" },
+    { name: "İzmir Ayküsan (Ayakkabıcılar Sitesi) Şubesi", lat: 38.4000, lng: 27.1200, address: "", phone: "" },
+    { name: "İzmir Pınarbaşı Şubesi", lat: 38.4300, lng: 27.1500, address: "", phone: "" },
+    { name: "İzmir Torbalı Şubesi", lat: 38.1800, lng: 27.3500, address: "", phone: "" },
+    { name: "İzmir Yenişehir Şubesi", lat: 38.4200, lng: 27.1300, address: "", phone: "" },
+    { name: "İzmir Çamdibi Şubesi", lat: 38.4400, lng: 27.1400, address: "", phone: "" },
+    { name: "İzmir Çiğli Şubesi", lat: 38.5000, lng: 27.0700, address: "", phone: "" }
   ]
 };
 
@@ -227,11 +242,12 @@ document.addEventListener('DOMContentLoaded', function() {
   // Harita hareket ettirildiğinde sınırları kontrol et
   map.setMaxBounds(turkeyBounds);
   
-  // CartoDB Positron tile layer ekle (açık renk, sade görünüm)
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    subdomains: 'abcd',
-    maxZoom: 19
+  // OpenTopoMap tile layer ekle (topografik görünüm - açık renk, ince topo çizgileri)
+  L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)',
+    subdomains: ['a', 'b', 'c'],
+    maxZoom: 17,
+    opacity: 0.9 // Biraz şeffaflık ile daha açık görünüm
   }).addTo(map);
   
   // Özel marker ikonu oluştur
