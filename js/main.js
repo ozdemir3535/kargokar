@@ -297,6 +297,69 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
+  // =============================================
+  // KURUMSAL GİRİŞ LİNKİ UYARI MODALI
+  // =============================================
+  const corporateLinks = document.querySelectorAll('.corporate-link-notice');
+  
+  corporateLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      // Modal oluştur
+      const modal = document.createElement('div');
+      modal.className = 'modal active';
+      modal.style.display = 'flex';
+      modal.innerHTML = `
+        <div class="modal-content" style="max-width: 500px;">
+          <div class="modal-header">
+            <h2>
+              <i class="fas fa-exclamation-triangle" style="color: #ff6b6b; margin-right: 0.5rem;"></i>
+              Uyarı
+            </h2>
+            <button class="modal-close" onclick="this.closest('.modal').remove(); document.body.style.overflow = '';">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p style="font-size: var(--text-lg); line-height: 1.8; color: var(--text-dark); text-align: center; margin: 1.5rem 0;">
+              <strong>Kurumsal giriş sistemi şu anda teknik bir sorun yaşıyor. Lütfen daha sonra tekrar deneyiniz veya müşteri hizmetlerimizle iletişime geçiniz.</strong>
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+              <button class="btn btn-primary" onclick="this.closest('.modal').remove(); document.body.style.overflow = ''; window.open('https://kargokar.com/kurumsal/', '_blank');">
+                <i class="fas fa-arrow-right"></i> Yine de Devam Et
+              </button>
+              <button class="btn btn-secondary" onclick="this.closest('.modal').remove(); document.body.style.overflow = '';">
+                <i class="fas fa-times"></i> Kapat
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+      
+      document.body.appendChild(modal);
+      document.body.style.overflow = 'hidden';
+      
+      // Modal dışına tıklanınca kapat
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+          modal.remove();
+          document.body.style.overflow = '';
+        }
+      });
+      
+      // ESC tuşu ile kapat
+      const escHandler = function(e) {
+        if (e.key === 'Escape') {
+          modal.remove();
+          document.body.style.overflow = '';
+          document.removeEventListener('keydown', escHandler);
+        }
+      };
+      document.addEventListener('keydown', escHandler);
+    });
+  });
+  
 });
 
 // =============================================
